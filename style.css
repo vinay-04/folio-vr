@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab");
+
 body {
   background-color: rgb(19, 19, 19);
   animation: fadeInAnimation ease 3s;
@@ -23,9 +25,11 @@ body {
 h1 {
   background-color: transparent;
   font-size: 240px;
-  top: 35%;
+  top: 30%;
   left: 23%;
   position: absolute;
+  font-family: "Josefin Slab", serif;
+  font-weight: 400;
   opacity: 1;
   color: rgb(100, 100, 100);
   mix-blend-mode: difference;
@@ -55,7 +59,9 @@ h1 {
   margin-left: 20%;
   margin-right: 20%;
   margin-bottom: 20%;
-  text-align: justify;
+  text-align: center;
+  font-family: Josefin Slab, serif;
+  font-weight: 100;
   padding: none;
   font-size: 48px;
   color: rgb(100, 100, 100);
@@ -117,8 +123,9 @@ li a:hover {
   align-items: center;
   margin: auto;
   font-size: 68px;
-  color: rgb(115, 115, 115);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Josefin Slab, serif;
+  font-weight: bolder;
+  color: rgb(74, 74, 74);
 }
 
 .skills {
@@ -126,17 +133,23 @@ li a:hover {
   margin-left: 20%;
   margin-right: 20%;
   font-size: 42px;
+  font-family: Josefin Slab, serif;
+  font-weight: 100;
   color: rgb(100, 100, 100);
 }
 .projects {
   margin-left: 20%;
   margin-right: 20%;
   font-size: 42px;
+  font-family: Josefin Slab, serif;
+  font-weight: 100;
   color: rgb(100, 100, 100);
 }
 .contact {
   margin-left: 20%;
   margin-right: 20%;
   font-size: 42px;
+  font-family: Josefin Slab, serif;
+  font-weight: 100;
   color: rgb(100, 100, 100);
 }
