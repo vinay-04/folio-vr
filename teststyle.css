@@ -6,6 +6,7 @@ body {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
+
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -24,12 +25,11 @@ body {
 
 h1 {
   background-color: transparent;
-  font-size: 240px;
-  top: 30%;
-  left: 23%;
+  font-size: 8vw; /* Use viewport width units for font size */
+  top: 10%; /* Adjust top position as needed */
+  left: 5%; /* Adjust left position as needed */
   position: absolute;
   font-family: "Josefin Slab", serif;
-  font-weight: 400;
   opacity: 1;
   color: rgb(100, 100, 100);
   mix-blend-mode: difference;
@@ -37,13 +37,15 @@ h1 {
   transition: transform 0.4s;
   pointer-events: none;
 }
+
 .bg {
-  width: 1600px;
+  max-width: 100%; /* Ensure the background container is responsive */
   display: flex;
   justify-content: center;
   margin: 0 auto;
   transition: transform 0.4s;
 }
+
 .lg:hover img {
   transition: transform 0.3s;
   transform: scale(0.8);
@@ -56,13 +58,11 @@ h1 {
 }
 
 .bio {
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-bottom: 20%;
+  margin: 2%;
   text-align: center;
   font-family: Josefin Slab, serif;
   font-weight: 100;
-  font-size: 48px;
+  font-size: 4vw; /* Use viewport width units for font size */
   color: rgb(100, 100, 100);
 }
 
@@ -95,19 +95,19 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   font-family: Josefin Slab, serif;
 }
 
 li {
-  float: right;
+  float: none; /* Remove float for responsive navigation */
+  text-align: center;
+  margin: 10px 0;
 }
 
 li a {
-  display: flex;
+  display: block;
   color: white;
-  text-align: center;
-  font-size: 24px;
+  font-size: 4vw; /* Use viewport width units for font size */
   padding: 14px 16px;
   text-decoration: none;
 }
@@ -121,27 +121,23 @@ li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  font-size: 68px;
-  font-family: Josefin Slab, serif;
+  font-size: 6vw; /* Use viewport width units for font size */
+  font-family: "Josefin Slab", serif;
   font-weight: bolder;
   color: rgb(0, 110, 110);
 }
 
 .skills {
   margin: 2%;
-  margin-left: 20%;
-  margin-right: 20%;
-  font-size: 42px;
-  font-family: Josefin Slab, serif;
+  font-size: 3vw; /* Use viewport width units for font size */
+  font-family: "Josefin Slab", serif;
   font-weight: 100;
   color: rgb(100, 100, 100);
 }
+
 .projects {
-  margin-left: 20%;
-  margin-right: 20%;
-  font-size: 42px;
-  font-family: Josefin Slab, serif;
+  font-size: 3vw; /* Use viewport width units for font size */
+  font-family: "Josefin Slab", serif;
   font-weight: 100;
   text-align: left;
   color: rgb(100, 100, 100);
@@ -153,5 +149,5 @@ a {
 }
 
 .socials {
-  max-width: 1000%;
+  max-width: 100%;
 }

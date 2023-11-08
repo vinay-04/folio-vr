@@ -1,3 +1,5 @@
+// alert("ps: This site isn't responsive :)");
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
