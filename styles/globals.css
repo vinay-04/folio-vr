@@ -15,6 +15,24 @@ body {
   }
 }
 
+.nav {
+  display: flex;
+  justify-content: end;
+  flex-direction: row;
+  font-size: 1.5rem;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    gap: 2rem;
+  }
+}
+
 .lg {
   position: relative;
   display: inline-block;
@@ -72,25 +90,6 @@ section {
   align-content: center;
 }
 
-.hidden {
-  opacity: 0;
-  filter: blur(5px);
-  transition: all 1s;
-  transform: translateX(-100%);
-}
-
-@media (prefers-reduced-motion) {
-  .hidden {
-    transition: none;
-  }
-}
-
-.show {
-  filter: blur(0);
-  transform: translateX(0);
-  opacity: 1;
-}
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -136,6 +135,9 @@ li a:hover {
   font-family: Josefin Slab, serif;
   font-weight: 100;
   color: rgb(100, 100, 100);
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 .projects {
   margin-left: 20%;
