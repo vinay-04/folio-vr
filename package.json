@@ -1,26 +1,32 @@
 {
-  "name": "vinay-ka-portfolio",
-  "version": "0.1.0",
+  "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "framer-motion": "^11.3.2",
-    "next": "14.2.5",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-intersection-observer": "^9.13.0"
+    "@nuxtjs/color-mode": "^3.5.2",
+    "@radix-icons/vue": "^1.0.0",
+    "@vueuse/motion": "^2.2.6",
+    "nuxt": "^3.14.1592",
+    "radix-vue": "^1.9.11",
+    "vue": "latest",
+    "vue-router": "latest"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5"
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@vueuse/core": "^12.2.0",
+    "autoprefixer": "^10.4.20",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "postcss": "^8.4.49",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-animate": "^1.0.7"
   }
 }
