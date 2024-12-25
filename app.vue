@@ -10,24 +10,24 @@
       :staticity="10"
       refresh
     />
-    <div class="relative flex min-h-screen  flex-row items-start justify-center gap-4 ">
-      <div class="relative flex min-h-screen flex-col items-start justify-center gap-4">
-        <Me />
-        <div class="relative flex flex-row items-start justify-center gap-4">
+    <div class="relative flex min-h-screen flex-col md:flex-row items-center justify-center gap-4">
+      <div class="relative flex min-h-screen flex-col items-center justify-center gap-4 w-full md:w-auto">
+      <Me />
+      <div class="relative flex flex-col md:flex-row items-center justify-center gap-4">
         <Projects />
-        <div class="relative flex flex-col items-start justify-center gap-4">
-          <TimeLine />
-          <Contacts />
-        </div>
+        <div class="relative flex flex-col items-center justify-center gap-4">
+        <TimeLine />
+        <Contacts />
         </div>
       </div>
-      <div class="relative flex min-h-screen flex-col items-start justify-center gap-4">
-        <Now />
-        <Tech />
-        <Footer />
+      </div>
+      <div class="relative flex min-h-screen flex-col items-center justify-center gap-4 w-full md:w-auto">
+      <Now />
+      <Tech />
+      <Footer />
       </div>
     </div>
-  </div>
+    </div>
 
 </template>
 
