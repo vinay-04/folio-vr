@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="flex flex-col space-y-1">
-        <div class="text-sm">Software Developer</div>
+        <div class="text-sm">Software Engineer</div>
         <div class="text-sm">Musician</div>
       </div>
     </div>

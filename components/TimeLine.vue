@@ -1,13 +1,13 @@
 <template>
-  <div class="relative flex h-56 w-[26rem] flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl bg-gray-950 p-4 text-white hover:border-cyan-600">
-    <div class="timeline-container">
+  <div class="relative flex h-56 w-[26rem] flex-col items-start justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl bg-gray-950 p-4 text-white hover:border-cyan-600">
+    <div class="timeline-container ">
       <div
       class="timeline relative flex items-center justify-center overflow-x-scroll border-b border-gray-600 pb-2"
       ref="timeline"
       @scroll="handleScroll"
       >
 
-      <div class="flex gap-12 min-w-max relative px-[50%] pl-[40rem]">
+      <div class="flex gap-12 min-w-max relative pl-[40rem]">
         <div
         v-for="year in years"
         :key="year"
@@ -17,6 +17,7 @@
         >
         {{ year }}
         </div>
+        <span class="translate-y-1">-------→</span>
         <div
         class="line-follower absolute h-1 bg-cyan-600 rounded-md"
         :style="{ left: `${linePosition}px`, width: '4px' }"
@@ -25,9 +26,10 @@
       </div>
 
       <div class="content mt-4 text-white">
-      <h2 class="text-lg font-bold">Content for {{ selectedYear }}</h2>
-      <p>
-        {{ yearContents[selectedYear] || 'No content available for this year.' }}
+      <p v-for="content in yearContents[selectedYear]" :key="content">
+        <ul>
+        <li>- {{ content }}</li>
+        </ul>
       </p>
       </div>
     </div>
@@ -41,11 +43,11 @@ export default {
       years: [2020, 2021, 2022, 2023, 2024],
       selectedYear: null,
       yearContents: {
-        2020: "Events and highlights from 2020.",
-        2021: "Events and highlights from 2021.",
-        2022: "Events and highlights from 2022.",
-        2023: "Events and highlights from 2023.",
-        2024: "Events and highlights from 2024.",
+        2020: ['1', '2', '3'],
+        2021: ['4', '5', '6'],
+        2022: ['7', '8', '9'],
+        2023: ['10', '11', '12'],
+        2024: ['13', '14', '15'],
       },
       linePosition: 0,
     };
@@ -133,19 +135,9 @@ export default {
   border-radius: 0.5rem;
   transition: background 0.3s, color 0.3s;
 }
-.year:hover {
-  background: #0e7490;
-  color: white;
-}
 .line-follower {
   position: absolute;
   bottom: -2px;
   transition: left 0.3s ease;
-}
-.content {
-  background: #1a202c;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  text-align: center;
 }
 </style>

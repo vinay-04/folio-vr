@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="relative flex h-80 w-[15rem] flex-col items-start justify-start overflow-hidden rounded-lg border bg-background md:shadow-xl bg-gray-950 p-4 text-white hover:border-cyan-600">
-      <span>
-        <span class="text-2xl font-thin text-cyan-500 self-start">
+        <span class="text-2xl font-thin text-cyan-500 self-start mb-4">
           Projects
         </span>
-        <div v-for="project in projects" :key="project.name" class="flex flex-col self-start w-full space-y-2 mb-4" @click="openModal(project)">
-          <div class="flex flex-row items-center justify-between space-x-4">
-            <div class="text-lg font-thin">{{ project.name }}</div>
-            <div class="text-sm">{{ new Date(project.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long' }) }}</div>
+        <span>
+          <div v-for="project in projects" :key="project.name" class="flex flex-col self-start w-full" @click="openModal(project)">
+            <div class="flex flex-row items-center justify-between space-x-4">
+              <div class="text-lg font-thin hover:underline hover:cursor-grab">{{ project.name }}</div>
+              <div class="text-sm">{{ new Date(project.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long' }) }}</div>
+            </div>
           </div>
-        </div>
       </span>
     </div>
 
