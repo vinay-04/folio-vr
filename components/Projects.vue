@@ -16,7 +16,7 @@
 
     <div v-if="isModalOpen" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
       <div class="bg-transparent text-white flex flex-col items-center justify-center p-4 rounded-lg">
-        <h2 class="text-xl font-thin p-8 text-cyan-400">{{ selectedProject.name }}</h2>
+        <h2 class="text-sm font-thin p-8 text-cyan-400 truncate max-w-full whitespace-nowrap overflow-hidden">{{ selectedProject.name }}</h2>
         <p class="mt-2">{{ selectedProject.description }}</p>
         <div class="text-xs">{{ selectedProject.technologies.join(', ') }}</div>
         <a :href="selectedProject.link" v-if="selectedProject.link" class="p-4">
@@ -46,17 +46,37 @@ export default defineComponent({
     return {
       projects: [
         {
-          name: 'Project One',
-          description: 'Description for project one.',
-          date: new Date('2023-01-01'),
-          technologies: ['Vue', 'TypeScript', 'TailwindCSS'],
-          link: 'https://www.google.com',
+          name: 'Zedit',
+          description: 'iOS video clipping application to aid video editors. Uses Natural Language Processing and Computer vision to analyze scenes and split the video into multiple clips.',
+          date: new Date('2023-05-01'),
+          technologies: ['NLP', 'OpenCV', 'Swift'],
+          link: 'https://github.com/Zedit-iOS/Zedit-UIKit'
         },
         {
-          name: 'Project Two',
-          description: 'Description for project two.',
+          name: 'zkSNARK Precompile',
+          description: 'A hackathon project built using gnark, a Go library for zero-knowledge proofs. Implemented a Precompile to be deployed on Avalanche Network.',
+          date: new Date('2023-04-01'),
+          technologies: ['Go', 'zkSNARK', 'Avalanche', 'Blockchain'],
+        },
+        {
+          name: 'MyShow',
+          description: 'Event Booking app. A Flutter application enables artists to reserve performance slots and hosts to create events, with the backend built using the Echo framework.',
+          date: new Date('2023-03-01'),
+          technologies: ['Flutter', 'Echo', 'Dart', 'Go'],
+        },
+        {
+          name: 'Polinyx',
+          description: 'Video-chat application for disabled people, this application has Sign language detection integrated into it.',
           date: new Date('2023-02-01'),
-          technologies: ['React', 'JavaScript', 'CSS'],
+          technologies: ['Tensorflow', 'OpenCV', 'Python'],
+          link: 'https://github.com/stuff-makers/Polinyx'
+        },
+        {
+          name: 'Dhwani',
+          description: 'Streamline interactions between supervisors of hospitals, therapists and patients, with auto speech assessment tests.',
+          date: new Date('2023-01-01'),
+          technologies: ['NestJS', 'NextJS', 'Python'],
+          link: 'https://github.com/HoneyComb-Dhwani/dhwani'
         },
       ] as Project[],
       isModalOpen: false,

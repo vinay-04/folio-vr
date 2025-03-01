@@ -17,7 +17,9 @@
         >
         {{ year }}
         </div>
-        <span class="translate-y-1">-------→</span>
+        <span class="w-40 pt-3">
+        <img src="/public/rightArrow.svg" alt="">
+        </span>
         <div
         class="line-follower absolute h-1 bg-cyan-600 rounded-md"
         :style="{ left: `${linePosition}px`, width: '4px' }"
@@ -25,12 +27,15 @@
       </div>
       </div>
 
-      <div class="content mt-4 text-white">
-      <p v-for="content in yearContents[selectedYear]" :key="content">
-        <ul>
+      <div class="content mt-4 text-white text-sm">
+        <p v-for="content in yearContents[selectedYear]" :key="content">
+          <ul v-if="content">
         <li>- {{ content }}</li>
-        </ul>
-      </p>
+          </ul>
+          <ul v-else>
+            &nbsp;
+          </ul>
+        </p>
       </div>
     </div>
   </div>
@@ -40,14 +45,27 @@
 export default {
   data() {
     return {
-      years: [2020, 2021, 2022, 2023, 2024],
+      years: [2022, 2023, 2024, 2025],
       selectedYear: null,
       yearContents: {
-        2020: ['1', '2', '3'],
-        2021: ['4', '5', '6'],
-        2022: ['7', '8', '9'],
-        2023: ['10', '11', '12'],
-        2024: ['13', '14', '15'],
+      2022: [
+        'SDG Hackathon Runner-Up. Traffic management solution. Rs 20,000 prize.',
+        "",
+        ""
+      ],
+      2023: [
+        'Unfold 2023 Runner-Up. zkSNARK Avalanche precompile. $2500 bounty.',
+        'Technical Team Member. Club project collaborations. Event organization.'
+      ],
+      2024: [
+        'FintechAI Hackathon Runner-Up. Secure payment system. Rs 15,000.',
+        'Apple iOS Student Program. Two semester Infosys course.'
+      ],
+      2025: [
+        'Infosys Swift Internship. iOS development using SwiftUI framework.',
+        '',
+        '',
+      ],
       },
       linePosition: 0,
     };
@@ -88,9 +106,6 @@ export default {
   const yearElements = this.$refs.yearElements;
   const selectedElement = yearElements[this.years.indexOf(this.selectedYear)];
   if (selectedElement) {
-    const timeline = this.$refs.timeline;
-    const selectedRect = selectedElement.getBoundingClientRect();
-    const timelineRect = timeline.getBoundingClientRect();
 
     this.linePosition =
       selectedElement.offsetLeft + selectedElement.offsetWidth / 2 - 2;
