@@ -5,7 +5,9 @@
         Hello World
       </span>
       <span class="p-4 font-roboto font-light">
-        Hi there! I'm <span class="font-bold">Vinay Rajan</span> a software engineer based in India. I specialize in app development and have a keen interest in machine learning. Always excited to build innovative solutions and explore new technologies. Feel free to reach out to me!
+        Hi there! I'm <span class="font-bold">Vinay Rajan</span> a software engineer based in India. I specialize in app development and have a keen interest in machine learning. 
+        <br>
+        Feel free to reach out to me!
       </span>
     </div>
     <img class="h-40 w-40 rounded-full p-4 self-center" src="public/vr.png" alt="vinayrajan" />
