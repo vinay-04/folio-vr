@@ -1,7 +1,9 @@
 <template>
   <div class="relative flex h-20 w-[26rem] flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl bg-gray-950 p-4 text-white hover:border-cyan-600 ">
     <span class="flex flex-col">
-      <span>{{ currentTime }} </span>
+      <span class="font-mono text-xl font-semibold tracking-wider text-cyan-400 mb flex items-center justify-center">
+        {{ currentTime }}
+      </span>
       <div class="flex flex-row gap-2 justify-center items-center">
         <a href="https://www.linkedin.com/in/vinayrajans/">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="cursor-pointer hover:text-cyan-500">
